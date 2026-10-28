@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FloodWatch Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div>
+      <h1>FloodWatch</h1>
+      <p>Smart Flood Monitoring System</p>
+    </div>
+    <span id="connection" class="badge">DEMO MODE</span>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">WATER MONITORING STATION</p>
+      <h2>Water Level Dashboard</h2>
+      <p>Monitor water conditions in real time.</p>
+    </section>
+
+    <section class="cards">
+      <article class="card">
+        <p>Water Level</p>
+        <h2><span id="level">--</span><small> cm</small></h2>
+        <div class="meter"><div id="fill"></div></div>
+        <p id="distance">Sensor distance: -- cm</p>
+      </article>
+
+      <article class="card">
+        <p>Flood Status</p>
+        <h2 id="status">Loading...</h2>
+        <p id="statusText">Checking water conditions</p>
+      </article>
+
+      <article class="card">
+        <p>Last Update</p>
+        <h2 id="updated">--:--:--</h2>
+        <p>Latest sensor reading</p>
+      </article>
+    </section>
+
+    <section class="card history">
+      <h2>Water Level History</h2>
+      <p id="historyText">Waiting for live sensor data...</p>
+      <canvas id="chart" height="120"></canvas>
+    </section>
+
+    <p class="footer">FloodWatch • Smart Flood Early Warning System</p>
+  </main>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
